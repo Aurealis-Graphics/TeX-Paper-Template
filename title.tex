@@ -1,0 +1,17 @@
+\title{Paper Title}
+\author[1]{Author Name, \textit{\large Affiliation}}
+\date{}
+
+\def\articleNumber{1}
+\def\publishingYear{\the\year{}}
+
+\def\runningTitle{Running Paper Title}
+\def\runningAuthors{Running Author Name}
+\def\runningCopyright{Copyright © \publishingYear\ held by the owner/author(s)}
+
+\fancyhead[R]{\ifthenelse{\isodd{\value{page}}}{\footnotesize\runningTitle\ \ \ •\ \ \ \articleNumber:\thepage}{}}
+\fancyhead[L]{\ifthenelse{\isodd{\value{page}}}{}{\footnotesize\articleNumber:\thepage\ \ \ •\ \ \ \runningAuthors}}
+
+\fancyfoot[R]{\ifthenelse{\isodd{\value{page}}}{\footnotesize \today\ \ \ •\ \ \ AG Journal Article \articleNumber}{}}
+\fancyfoot[C]{}
+\fancyfoot[L]{\ifthenelse{\isodd{\value{page}}}{}{\footnotesize AG Journal Article \articleNumber\ \ \ •\ \ \ \today}}

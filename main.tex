@@ -1,0 +1,117 @@
+\documentclass[9pt,a4paper,oneside]{extarticle}
+\input{include}
+\input{title}
+
+\begin{document}
+\maketitle
+\pagestyle{fancy}
+\thispagestyle{firstpage}
+
+\begin{center}
+    \vspace{0.1cm}
+    
+    \includegraphics[width=\textwidth]{cover.png}
+    
+    \vspace{0.5cm}
+    
+    \begin{abstract}
+        This paper presents [key contribution/findings]. [Brief 1-2 sentence motivation/background for the research]. The main objectives were to [list key objectives]. [High-level approach/methods used]. The results demonstrate that [summarize critical results/findings]. [Significance/implications of the findings]. Overall, this research [broad concluding statement about the importance/impact of the work].
+        \\\\
+        \textit{Keywords: } keyword1, keyword2, keyword3
+    \end{abstract}
+    
+    \vspace{0.5cm}
+\end{center}
+    
+\begin{multicols*}{2}
+
+\noindent\fbox{%
+    \parbox{0.95\columnwidth}{%
+        \textit{DISCLAIMER: This study was conducted independently by its authors, without formal peer review processes. Our research aims to contribute to public knowledge. Despite having fewer resources and less expertise than established institutions, we strive to maintain professionalism by adopting the format of academic papers. The information contained herein is subject to modification without prior notice. Citation including exact access dates is advisable.}
+    }%
+}
+
+\section{Introduction}
+This document serves as a comprehensive LaTeX template for all research conducted under the name "Aurealis Graphics". It is designed to provide a consistent and streamlined approach to formatting and structuring research documents, ensuring clarity, coherence, and adherence to academic and professional standards.\\
+\\
+By adhering to this template, researchers can ensure consistency, clarity, and professionalism in their research documentation, facilitating effective communication and collaboration within the organization and the broader scientific community.
+
+\section{Math Equations}
+Here's an example of a mathematical expression:
+\begin{equation}
+    f(x)=2x^3+5x^2-4x
+\end{equation}
+And an unnumbered equation:
+\begin{equation*}
+    f(x)=\left(e^{-x}\sum_{k=0}^{10} x^n\right)\int_0^1 3x^4\mathrm{d}x
+\end{equation*}
+Awesome!
+
+\section{Citations}
+Here's a citation \cite{Nic77:Nicodemus1977} hahaha.
+
+\section{Figures}
+The template offers nicely formatted figure-types \ref{table:figure}, \ref{image:figure}, \ref{codeblock:figure}.
+
+\subsection{Tables}
+For example, tables:
+\begin{center}\label{table:figure}
+    \begin{tabular}{|r|l|}
+        \hline
+        7C0         & hexadecimal \\
+        3700        & octal \\ \cline{2-2}
+        11111000000 & binary \\
+        \hline        \hline
+        1984        & decimal \\
+        \hline
+    \end{tabular}
+    \captionof{figure}{Just an example of a table}
+\end{center}
+
+\subsection{Images}
+And, of course, images:
+
+\begin{center}\label{image:figure}
+    \includegraphics[width=\columnwidth]{cover.png}
+    \captionof{figure}{Just an example of an image}
+\end{center}
+
+\subsection{Code Blocks}
+The template uses \textit{minted} to format code blocks. Global styling settings have been set. A code section can be started with "$\backslash$begin\{minted\}\{<language>\}".\\
+\\
+This is a code example in Julia (jl):
+\label{codeblock:figure}\begin{minted}{jl}
+function ICDF(u)
+    u = 1.0 - u
+
+    g = 1 + (4u) * (2u + sqrt(1 + 4u^2))
+    n = exp2(log2(g) * (-1/3))
+    p = g * n^2
+    c = 1 + p + n
+    sr = (3 / log2(MathConstants.e)) * log2(c / (4u))
+
+    rcpExp = c^3 / ((4u) * (c^2 + 16 * u^2))
+
+    return sr, 8pi * rcpExp
+end
+\end{minted}
+\vspace{-3mm} % to account for the "framesep"
+\captionof{figure}{Just an example of a code block}
+
+\section*{Conclusion}
+In this study, we investigated [brief summary of the research topic/question]. Our key findings were [summarize the main results in 1-3 concise points]. These results contribute to the existing literature on [research area] by [explain how the findings add to or advance the field].\\
+\\
+The implications of this research are [discuss real-world applications or theoretical implications]. However, there are some limitations that should be acknowledged, including [note any major limitations].\\
+\\
+Based on these findings, potential areas for future research include [suggest 1-2 areas needing further exploration]. Additional studies are needed to [explain what is still unknown or unresolved].\\
+\\
+Overall, this study provides important insights into [restate the core contribution and significance]. The findings have relevance for [discuss who could benefit or be impacted] and highlight opportunities for [reiterate key implications or applications].
+
+\printbibliography
+
+\newpage
+Page \thepage
+\newpage
+Page \thepage
+\end{multicols*}
+\end{document}
