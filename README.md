@@ -9,7 +9,7 @@ This repository holds the basic LaTeX file structure which every Aurealis Graphi
 This LaTeX template being publicized is the first step towards making that happen. The idea stemmed from the incredible amount of novelty and talent within online Minecraft graphics developer communities, and this is my attempt of
 facilitating the writing process for the sake of public knowledge." - [@TechDevOnGitHub](https://github.com/TechDevOnGitHub)
 
-## [SOON] How do I get my research published?
+## [SOON] How do I get my research published through Aurealis Graphics?
 1. After finalizing your document, please send your writings to aurealisgraphics@gmail.com for review.
 
 Once reviewed and if applicable to our research fields (real-time computer graphics and adjacent fields), we will encourage you to do the following:
